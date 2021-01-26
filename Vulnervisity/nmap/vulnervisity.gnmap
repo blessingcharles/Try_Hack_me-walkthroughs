@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Tue Jan 26 04:14:46 2021 as: nmap -p- -sC -sV -oA nmap/vulnervisity 10.10.234.90
+Host: 10.10.234.90 ()	Status: Up
+Host: 10.10.234.90 ()	Ports: 21/open/tcp//ftp//vsftpd 3.0.3/, 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 445/open/tcp//netbios-ssn//Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)/, 3128/open/tcp//http-proxy//Squid http proxy 3.5.12/, 3333/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/	Ignored State: closed (65529)
+# Nmap done at Tue Jan 26 04:27:19 2021 -- 1 IP address (1 host up) scanned in 753.58 seconds

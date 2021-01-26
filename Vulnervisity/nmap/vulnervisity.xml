@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Jan 26 04:14:46 2021 as: nmap -p- -sC -sV -oA nmap/vulnervisity 10.10.234.90 -->
+<nmaprun scanner="nmap" args="nmap -p- -sC -sV -oA nmap/vulnervisity 10.10.234.90" start="1611614686" startstr="Tue Jan 26 04:14:46 2021" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1611614686" endtime="1611615439"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.234.90" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65529">
+<extrareasons reason="resets" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.7" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 5a:4f:fc:b8:c8:76:1c:b5:85:1c:ac:b2:86:41:1c:5a (RSA)&#xa;  256 ac:9d:ec:44:61:0c:28:85:00:88:e9:68:e9:d0:cb:3d (ECDSA)&#xa;  256 30:50:cb:70:5a:86:57:22:cb:52:d9:36:34:dc:a5:58 (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDYQExoU9R0VCGoQW6bOwg0U7ILtmfBQ3x/rdK8uuSM/fEH80hgG81Xpqu52siXQXOn1hpppYs7rpZN+KdwAYYDmnxSPVwkj2yXT9hJ/fFAmge3vk0Gt5Kd8q3CdcLjgMcc8V4b8v6UpYemIgWFOkYTzji7ZPrTNlo4HbDgY5/F9evC9VaWgfnyiasyAT6aio4hecn0Sg1Ag35NTGnbgrMmDqk6hfxIBqjqyYLPgJ4V1QrqeqMrvyc6k1/XgsR7dlugmqXyICiXu03zz7lNUf6vuWT707yDi9wEdLE6Hmah78f+xDYUP7iNA0raxi2H++XQjktPqjKGQzJHemtPY5bn</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">5a4ffcb8c8761cb5851cacb286411c5a</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHCK2yd1f39AlLoIZFsvpSlRlzyO1wjBoVy8NvMp4/6Db2TJNwcUNNFjYQRd5EhxNnP+oLvOTofBlF/n0ms6SwE=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">ac9dec44610c28850088e968e9d0cb3d</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIGqh93OTpuL32KRVEn9zL/Ybk+5mAsT/81axilYUUvUB</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">3050cb705a865722cb52d93634dca558</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" hostname="VULNUNIVERSITY" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.3.11-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="VULNUNIVERSITY" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="3128"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="Squid http proxy" version="3.5.12" method="probed" conf="10"><cpe>cpe:/a:squid-cache:squid:3.5.12</cpe></service><script id="http-server-header" output="squid/3.5.12"><elem>squid/3.5.12</elem>
+</script><script id="http-title" output="ERROR: The requested URL could not be retrieved"><elem key="title">ERROR: The requested URL could not be retrieved</elem>
+</script></port>
+<port protocol="tcp" portid="3333"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-title" output="Vuln University"><elem key="title">Vuln University</elem>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -3h50m53s, deviation: 2h53m12s, median: -5h30m54s"><elem key="mean">-13853</elem>
+<elem key="stddev">10392</elem>
+<elem key="median">-19854</elem>
+<elem key="count">3</elem>
+</script><script id="nbstat" output="NetBIOS name: VULNUNIVERSITY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.3.11-Ubuntu)&#xa;  Computer name: vulnuniversity&#xa;  NetBIOS computer name: VULNUNIVERSITY\x00&#xa;  Domain name: \x00&#xa;  FQDN: vulnuniversity&#xa;  System time: 2021-01-25T12:26:18-05:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.3.11-Ubuntu</elem>
+<elem key="server">VULNUNIVERSITY\x00</elem>
+<elem key="date">2021-01-25T12:26:18-05:00</elem>
+<elem key="fqdn">vulnuniversity</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2021-01-25T17:26:19&#xa;  start_date: N/A"><elem key="date">2021-01-25T17:26:19</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="179611" rttvar="360" to="181051"/>
+</host>
+<runstats><finished time="1611615439" timestr="Tue Jan 26 04:27:19 2021" elapsed="753.58" summary="Nmap done at Tue Jan 26 04:27:19 2021; 1 IP address (1 host up) scanned in 753.58 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
